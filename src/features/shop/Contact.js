@@ -4,7 +4,7 @@ import Navbar from "../../features/shop/Navbar";
 function Contact() {
   return (
     <div className="shop">
-      <div className="container">
+      <div className="navbar__container">
         <Navbar />
       </div>
       <div className="shop__body">
@@ -16,30 +16,30 @@ function Contact() {
               happy to accomodate you!
             </p>
             <div className="message">
-              <div>
-                <div class="box">
-                  <div class="icon">
-                    <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <div className="message__details">
+                <div className="box">
+                  <div className="icon">
+                    <i className="fa fa-map-marker" aria-hidden="true"></i>
                   </div>
-                  <div class="text">
+                  <div className="text">
                     <h3>Address</h3>
                     <p>Burgos St. La Paz, Iloilo City Philippines 5000</p>
                   </div>
                 </div>
-                <div class="box">
-                  <div class="icon">
-                    <i class="fa fa-phone" aria-hidden="true"></i>
+                <div className="box">
+                  <div className="icon">
+                    <i className="fa fa-phone" aria-hidden="true"></i>
                   </div>
-                  <div class="text">
+                  <div className="text">
                     <h3>Phone</h3>
                     <p> 320-7190 loc. 190</p>
                   </div>
                 </div>
-                <div class="box">
-                  <div class="icon">
-                    <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                <div className="box">
+                  <div className="icon">
+                    <i className="fa fa-envelope-o" aria-hidden="true"></i>
                   </div>
-                  <div class="text">
+                  <div className="text">
                     <h3>Email</h3>
                     <p>iirgp@isatu.edu.ph</p>
                   </div>

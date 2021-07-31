@@ -5,7 +5,7 @@ import Navbar from "./Navbar";
 function Shop() {
   return (
     <div className="shop">
-      <div className="container">
+      <div className="navbar__container">
         <Navbar />
       </div>
       <div className="shop__body">

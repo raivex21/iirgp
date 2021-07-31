@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { editItemToCart, getCart, removeItemToCart } from "./cartSlice";
 import Navbar from "../../features/shop/Navbar";
 import { createOrder } from "../../features/orderSlice";
+import { Button } from "@material-ui/core";
 
 export const Cart = () => {
   const dispatch = useDispatch();
@@ -48,7 +49,7 @@ export const Cart = () => {
   console.log(cart);
   return (
     <div className="shop">
-      <div className="container">
+      <div className="navbar__container">
         <Navbar />
       </div>
       <div className="shop__body">

@@ -167,49 +167,29 @@ function Register() {
       </div>
       <div className="register__form">
         <h2>Registration Form</h2>
-        <div className={classes.fields}>
-          <TextField
-            style={{ marginTop: "20px", marginBottom: "20px" }}
-            id="standard-basic"
-            label="First Name"
-            onChange={handleFirstName}
-          />
-          <TextField
-            style={{ marginTop: "20px", marginBottom: "20px" }}
-            id="standard-basic"
-            label="Middle Name"
-            onChange={handleMiddleName}
-          />
-          <TextField
-            style={{ marginTop: "20px", marginBottom: "20px" }}
+        <div className="register__fields">
+          <input placeholder="First Name" onChange={handleFirstName} />
+          <input placeholder="Middle Name" onChange={handleMiddleName} />
+          <input
             className="textField"
-            InputProps={{
-              className: classes.input,
-            }}
-            label="Last Name"
+            placeholder="Last Name"
             onChange={handleLastName}
           />
 
-          <TextField
-            style={{ marginTop: "20px", marginBottom: "20px" }}
-            label="Email"
-            onChange={handleEmail}
-          />
-          <TextField
-            style={{ marginTop: "20px", marginBottom: "20px" }}
+          <input placeholder="Email" onChange={handleEmail} />
+          <input
             type="password"
-            label="Password"
+            placeholder="Password"
             onChange={handlePassword1}
           />
-          <TextField
-            style={{ marginTop: "20px", marginBottom: "20px" }}
+          <input
             type="password"
-            label="Confirm Password"
+            placeholder="Confirm Password"
             onChange={handlePassword2}
           />
-          <TextField
-            style={{ marginTop: "20px", marginBottom: "20px" }}
+          <input
             label="Phone No."
+            placeholder="Phone No."
             onChange={handlePhoneNo}
           />
         </div>
