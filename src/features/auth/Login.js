@@ -89,6 +89,7 @@ export default function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(authLogin(username, password));
+    navigate("/");
   };
 
   return (

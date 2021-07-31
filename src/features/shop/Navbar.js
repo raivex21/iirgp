@@ -10,6 +10,10 @@ import { navigate } from "hookrouter";
 function Navbar() {
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart.cart);
+  const handleLogout = () => {
+    dispatch(logout());
+    navigate("/login");
+  };
 
   return (
     <div className="navbar">
@@ -34,11 +38,7 @@ function Navbar() {
           </Badge>
         </IconButton>
 
-        <Button
-          variant="contained"
-          color="secondary"
-          onClick={() => dispatch(logout())}
-        >
+        <Button variant="contained" color="secondary" onClick={handleLogout}>
           Logout
         </Button>
       </div>

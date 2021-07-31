@@ -4,12 +4,15 @@ import { editItemToCart, getCart, removeItemToCart } from "./cartSlice";
 import Navbar from "../../features/shop/Navbar";
 import { createOrder } from "../../features/orderSlice";
 import { Button } from "@material-ui/core";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const Cart = () => {
   const dispatch = useDispatch();
   const { userId, token, first_name } = useSelector((state) => state.auth);
   const { cart, error, loading, profile } = useSelector((state) => state.cart);
   const [currentCount, setCurrentCount] = React.useState(0);
+  const notify = () => toast("Wow so easy!");
 
   useEffect(() => {
     dispatch(getCart(token, userId));
@@ -36,6 +39,15 @@ export const Cart = () => {
       ordered_item: ordered,
     };
     dispatch(createOrder(token, data));
+    toast.success("Order Success!", {
+      position: "bottom-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
   };
 
   const handleRemoveItem = (e, id) => {
@@ -94,6 +106,17 @@ export const Cart = () => {
             <Button variant="contained" onClick={handleCheckout}>
               Checkout
             </Button>
+            <ToastContainer
+              position="bottom-center"
+              autoClose={5000}
+              hideProgressBar={false}
+              newestOnTop={false}
+              closeOnClick
+              rtl={false}
+              pauseOnFocusLoss
+              draggable
+              pauseOnHover
+            />
           </div>
         </div>
       </div>
